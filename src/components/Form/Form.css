@@ -1,0 +1,37 @@
+.form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 70px;
+}
+
+.form-input-title, .form-input-timer {
+    display: flex;
+    flex-direction: column;
+    width: 220px;
+    /* margin-right: 30px; */
+}
+
+.label-title, .label-timer {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+
+.input-title, .input-timer {
+    border-radius: 5px;
+    height: 20px;
+}
+
+.input-title:hover, .input-timer:hover, .btn-form:hover {
+    background-color: rgb(241, 238, 238);
+    border: 2px solid grey;
+}
+
+.btn-form {
+    width: 130px;
+    height: 40px;
+    border: 1px solid grey;
+    margin-top: 15px;
+}
+ 

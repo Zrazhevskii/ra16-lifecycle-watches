@@ -1,4 +1,4 @@
-#root {
+/* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -39,4 +39,14 @@
 
 .read-the-docs {
   color: #888;
+} */
+
+.main-wrapper {
+  width: 800px;
+  height: 80%;
+  border: 1px solid gray;
+  margin-top: 30px;
+  padding: 10px 20px;
+  -webkit-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 5px 15px 5px rgba(0,0,0,0.85); 
+  box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 5px 15px 5px rgba(0,0,0,0.85);
 }
