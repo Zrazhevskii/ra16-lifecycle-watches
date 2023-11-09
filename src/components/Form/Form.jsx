@@ -1,9 +1,8 @@
 import { useState } from 'react';
 import './Form.css';
-import { Valid, sameCheck } from './Valid';
+import { Valid } from './Valid';
 import { WatchItems } from '../Watch/WatchItems';
 import PropTypes from 'prop-types';
-
 export const Form = ({ data }) => {
     const [valueName, setValueName] = useState({
         title: '',
@@ -19,7 +18,7 @@ export const Form = ({ data }) => {
             return;
         }
 
-        if (sameCheck(valueName, items))
+        if (check(valueName, items))
             return setItems((prevItems) => [...prevItems, valueName]);
     };
 
@@ -43,6 +42,32 @@ export const Form = ({ data }) => {
 
     const DeletElem = (title) => {
         return setItems(items.filter((e) => e.title !== title));
+    };
+
+    const check = (item, data) => {
+        const { title, timer } = item;
+        let arr = [];
+        let num = [];
+
+        data.map((item) => {
+            arr.push(item.title.toLowerCase());
+        });
+
+        data.map((item) => {
+            num.push(item.timer.toLowerCase());
+        });
+
+        if (
+            arr.includes(title.toLowerCase()) ||
+            num.includes(timer.toLowerCase())
+        ) {
+            alert(
+                'Элемент с таким названием или временная зона уже существует'
+            );
+            return;
+        } else {
+            return true;
+        }
     };
 
     return (
@@ -86,5 +111,5 @@ export const Form = ({ data }) => {
 };
 
 Form.propTypes = {
-    data: PropTypes.array.isRequired
-  }
+    data: PropTypes.array.isRequired,
+};
