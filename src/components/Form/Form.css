@@ -36,12 +36,19 @@
 .btn-form {
     width: 130px;
     height: 40px;
-    border: 1px solid grey;
+    border: 1px solid #3d6385;
+    background-color: #acd2f4;
     margin-top: 15px;
 }
 
-/* .watch-items-wrapper {
-    display: flex;
-    flex-direction: row;
-} */
+.btn-form:hover {
+    background-color: #3d6385;
+    color: white;
+}
+
+.watch-items-wrapper {
+    min-width: 750px;
+    min-height: 300px;
+    border: 1px solid black;
+}
  

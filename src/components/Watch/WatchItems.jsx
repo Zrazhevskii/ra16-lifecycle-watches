@@ -1,5 +1,6 @@
 import React from 'react'
 import { Watch } from './Watch'
+import "./Watch.css"
 
 export const WatchItems = ({ data }) => {
     // console.log(data)
