@@ -25,6 +25,10 @@ export const Watch = ({ item, onDelet }) => {
             };
         }, 1000);
     }, [hours, minutes, seconds]);
+    
+    console.log(hour)
+    console.log(minute)
+    console.log(second)
 
     return (
         <div className='clock-wrapper'>
