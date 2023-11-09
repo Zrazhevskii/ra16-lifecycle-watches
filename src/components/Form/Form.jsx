@@ -3,6 +3,7 @@ import '../../styles/Form.css'
 import { Valid } from './Valid';
 import { WatchItems } from '../Watch/WatchItems';
 import PropTypes from 'prop-types';
+
 export const Form = ({ data }) => {
     const [valueName, setValueName] = useState({
         title: '',
