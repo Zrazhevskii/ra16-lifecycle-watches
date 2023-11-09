@@ -7,7 +7,7 @@
 - Tokyo.
 - Watches
 
-![alt text](https://github.com/Zrazhevskii/ra16-lifecycle-watches/blob/main/watches.png.jpg?raw=true)
+![alt text](https://github.com/Zrazhevskii/ra16-lifecycle-watches/blob/main/src/image/watches.png)
 
 Общая механика:
 
