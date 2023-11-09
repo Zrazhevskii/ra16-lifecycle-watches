@@ -1,11 +1,12 @@
 import './App.css'
 import { Form } from './components/Form/Form'
+import { data } from '../data/data'
 
 function App() {
 
   return (
     <div className='main-wrapper'>
-      <Form/>
+      <Form data={data}/>
     </div>
   )
 }

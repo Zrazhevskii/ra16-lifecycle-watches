@@ -1,6 +1,8 @@
 import React from 'react';
 
-export const Watch = () => {
+export const Watch = (item) => {
+    console.log(item)
+
     return (
         <div className='clock'>
             <div className='hour'>

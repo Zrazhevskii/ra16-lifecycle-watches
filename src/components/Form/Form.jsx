@@ -1,36 +1,27 @@
 import React, { useState } from 'react';
 import './Form.css';
 import { Valid } from './Valid';
-import { Formdata } from './Formdata';
+import { WatchItems } from '../Watch/WatchItems';
 
-export const Form = () => {
+export const Form = ({data}) => {
+
     const [valueName, setValueName] = useState({
         title: '',
         timer: '',
     });
 
-    const [items, setItems] = useState([
-        {
-            title: 'Москва',
-            timer: '3',
-        },
-        {
-            title: 'Лондон',
-            timer: '0',
-        },
-    ]);
-
+    const [items, setItems] = useState(data);
 
     const { title, timer } = valueName;
 
     const changeItems = (elems) => {
-        // console.log(elems)
-        if (Valid(valueName)) {
-            setItems((prevItems) => [...prevItems, elems])
+        // console.log(elems);
+        if (!Valid(elems)) {
+            return
         }
-        console.log(items);
+        return setItems((prevItems) => [...prevItems, valueName]);
     };
-
+    
     const submitHandler = (e) => {
         e.preventDefault();
 
@@ -49,10 +40,8 @@ export const Form = () => {
         setValueName((prevValue) => ({ ...prevValue, [name]: value }));
     };
 
-    // console.log(valueName);
-
     return (
-        <div className='form-wrapper'>
+        <div className='content-wrapper'>
             <form action='' className='form' onSubmit={submitHandler}>
                 <div className='form-input-title'>
                     <label htmlFor='input-title' className='label-title'>
@@ -84,6 +73,9 @@ export const Form = () => {
                 </div>
                 <button className='btn-form'>Добавить</button>
             </form>
+            <div className='watch-items-wrapper'>
+                <WatchItems data={items}/>
+            </div>
         </div>
     );
 };

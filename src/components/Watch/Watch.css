@@ -1,0 +1,4 @@
+.watch-items {
+    display: flex;
+    flex-direction: row;
+}
