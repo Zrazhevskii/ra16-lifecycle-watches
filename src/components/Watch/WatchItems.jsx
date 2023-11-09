@@ -1,5 +1,5 @@
 import { Watch } from './Watch';
-import './Watch.css';
+import '../../styles/Watch.css'
 import PropTypes from 'prop-types';
 
 export const WatchItems = ({ data, onDelet }) => {
