@@ -8,9 +8,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    /* width: 100%; */
     min-height: 140px;
-    border: 1px solid red;
 }
 
 .clock-wrapper {
@@ -21,21 +19,19 @@
     width: 120px;
     height: 120px;
     margin-top: 10px;
-    /* position: absolute; */
-    /* position: relative; */
     display: flex;
     justify-content: center;
     align-items: center;
     background: url('../../image/clock-face.png');
     background-size: cover;
     border-radius: 50%;
-    -webkit-box-shadow: -8px 11px 11px 2px #000000; 
+    -webkit-box-shadow: -8px 11px 11px 2px #000000;
     box-shadow: -8px 11px 11px 2px #000000;
 }
 
 .clock:before {
-    content: "";
-    /* position: absolute; */
+    content: '';
+    position: absolute;
     width: 10px;
     height: 10px;
     background: #000000;
@@ -54,7 +50,6 @@
     margin: 0 auto;
     padding: 0;
     background-color: #acd2f4;
-    /* text-align: center; */
 }
 
 .clock-btn:hover {
@@ -88,16 +83,16 @@
     height: 120px;
 }
 
-.hour-hand, .minute-hand, .second-hand {
+.hour-hand,
+.minute-hand,
+.second-hand {
     display: flex;
     justify-content: center;
-
-    /* position: absolute; */
     border-radius: 50%;
 }
 
 .hour-hand:before {
-    content: "";
+    content: '';
     position: absolute;
     width: 3px;
     height: 50px;
@@ -107,9 +102,9 @@
 }
 
 .minute-hand:before {
-    content: "";
+    content: '';
     position: absolute;
-    width: 2px;
+    width: 3px;
     height: 60px;
     background-color: #376086;
     z-index: 11;
@@ -117,7 +112,7 @@
 }
 
 .second-hand:before {
-    content: "";
+    content: '';
     position: absolute;
     width: 2px;
     height: 65px;
@@ -125,4 +120,3 @@
     z-index: 12;
     border-radius: 3px 3px 0 0;
 }
-

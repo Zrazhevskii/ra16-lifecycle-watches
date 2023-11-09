@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './Form.css';
-import { Valid } from './Valid';
+import { Valid, sameCheck } from './Valid';
 import { WatchItems } from '../Watch/WatchItems';
+import PropTypes from 'prop-types';
 
-export const Form = ({data}) => {
-
+export const Form = ({ data }) => {
     const [valueName, setValueName] = useState({
         title: '',
         timer: '',
@@ -15,13 +15,14 @@ export const Form = ({data}) => {
     const { title, timer } = valueName;
 
     const changeItems = (elems) => {
-        // console.log(elems);
         if (!Valid(elems)) {
-            return
+            return;
         }
-        return setItems((prevItems) => [...prevItems, valueName]);
+
+        if (sameCheck(valueName, items))
+            return setItems((prevItems) => [...prevItems, valueName]);
     };
-    
+
     const submitHandler = (e) => {
         e.preventDefault();
 
@@ -38,6 +39,10 @@ export const Form = ({data}) => {
 
         const { name, value } = e.target;
         setValueName((prevValue) => ({ ...prevValue, [name]: value }));
+    };
+
+    const DeletElem = (title) => {
+        return setItems(items.filter((e) => e.title !== title));
     };
 
     return (
@@ -74,8 +79,12 @@ export const Form = ({data}) => {
                 <button className='btn-form'>Добавить</button>
             </form>
             <div className='watch-items-wrapper'>
-                <WatchItems data={items}/>
+                <WatchItems data={items} onDelet={DeletElem} />
             </div>
         </div>
     );
 };
+
+Form.propTypes = {
+    data: PropTypes.array.isRequired
+  }

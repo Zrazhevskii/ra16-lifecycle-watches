@@ -11,24 +11,28 @@
     height: 70px;
 }
 
-.form-input-title, .form-input-timer {
+.form-input-title,
+.form-input-timer {
     display: flex;
     flex-direction: column;
     width: 220px;
-    /* margin-right: 30px; */
 }
 
-.label-title, .label-timer {
+.label-title,
+.label-timer {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
 }
 
-.input-title, .input-timer {
+.input-title,
+.input-timer {
     border-radius: 5px;
     height: 20px;
 }
 
-.input-title:hover, .input-timer:hover, .btn-form:hover {
+.input-title:hover,
+.input-timer:hover,
+.btn-form:hover {
     background-color: rgb(241, 238, 238);
     border: 2px solid grey;
 }
@@ -49,6 +53,4 @@
 .watch-items-wrapper {
     min-width: 750px;
     min-height: 300px;
-    border: 1px solid black;
 }
- 
