@@ -47,28 +47,16 @@ export const Form = ({ data }) => {
 
     const check = (item, data) => {
         const { title, timer } = item;
-        let arr = [];
-        let num = [];
-
-        data.map((item) => {
-            arr.push(item.title.toLowerCase());
-        });
-
-        data.map((item) => {
-            num.push(item.timer.toLowerCase());
-        });
-
-        if (
-            arr.includes(title.toLowerCase()) ||
-            num.includes(timer.toLowerCase())
-        ) {
-            alert(
-                'Элемент с таким названием или временная зона уже существует'
-            );
-            return;
-        } else {
-            return true;
+    
+        const titleExists = data.some(existingItem => existingItem.title.toLowerCase() === title.toLowerCase());
+        const timerExists = data.some(existingItem => existingItem.timer.toLowerCase() === timer.toLowerCase());
+    
+        if (titleExists || timerExists) {
+            alert('Элемент с таким названием или временной зоной уже существует');
+            return false;
         }
+    
+        return true;
     };
 
     return (
