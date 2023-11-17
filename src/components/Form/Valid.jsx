@@ -6,14 +6,10 @@ export const Valid = (data) => {
         return;
     }
 
-    if (!isNumeric(timer)) {
+    if (isNaN(timer)) {
         alert('Формат ввода часов - цифры');
         return;
     } else {
         return true;
     }
 };
-
-function isNumeric(value) {
-    return /^\d+$/.test(value);
-}

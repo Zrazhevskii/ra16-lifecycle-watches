@@ -25,10 +25,8 @@ export const Watch = ({ item, onDelet }) => {
             };
         }, 1000);
     }, [hours, minutes, seconds]);
-    
-    console.log(hour)
-    console.log(minute)
-    console.log(second)
+
+    console.log(hour, minute, second);
 
     return (
         <div className='clock-wrapper'>
@@ -72,5 +70,5 @@ Watch.propTypes = {
     item: PropTypes.shape({
         title: PropTypes.string.isRequired,
         timer: PropTypes.string.isRequired,
-    })
-}
+    }),
+};
